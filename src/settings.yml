@@ -1,0 +1,18 @@
+ps5_edition: "disc" # disc or digital
+
+text_hours: 3 # every how often to text for status updates
+sleep_seconds: 2 # how often to sleep per check
+
+enable_telegram: "false"
+telegram_token: ""
+telegram_chat_id: ""
+
+enable_slack: "false"
+slack_webhook: ""
+slack_mentions:
+  - ""
+
+enable_discord: "false"
+discord_webhook: ""
+discord_mentions:
+  - ""
