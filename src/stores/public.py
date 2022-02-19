@@ -22,7 +22,7 @@ def publicSearch(ps5):
         response = requests.get(ps5_link + ps5_id).json()
         status = response['stockRule']['deliveryRule']['allowPurchases']
         status2 = response['stockRule']['deliveryRule']['displayText']
-        if status != "false" or status2 != "εξαντλήθηκε":
+        if status != "False" or status2 != "εξαντλήθηκε":
             msg = logger("PS5 " + ps5_name + " is in STOCK on " + site_domain + "\n\nBuy now -> " + ps5_buy + ps5_id + "/", 1)
             alerts(msg, 1)
         else:
