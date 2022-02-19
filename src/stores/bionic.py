@@ -13,7 +13,7 @@ def bionicSearch(ps5):
 
     if ps5 == "digital":
         ps5_name = "Digital Edition"
-        ps5_link = "https://bionic.com.cy/products/sony-playstation-5-ps5-digital-edition"
+        ps5_link = "https://bionic.com.cy/products/sony-playstation-5-ps5-digital-edition-18300387"
         edition = 1
 
     logger("Searching on " + site_domain + "..", 0)
