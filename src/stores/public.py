@@ -9,7 +9,7 @@ def publicSearch(ps5):
     site_domain = "public.cy"
     ps5_name = "Disc Edition"
     ps5_buy = "https://www.public.cy/product/gaming/consoles/ps5/"
-    ps5_link = "https://www.public.cy/public/v2/sku/"
+    ps5_link = "https://www.public.cy/public/v1/mm/productPage?sku="
     ps5_id = "1428499"
 
     if ps5 == "digital":
@@ -20,8 +20,9 @@ def publicSearch(ps5):
     
     try:
         response = requests.get(ps5_link + ps5_id).json()
-        status = response['sku']['miraklHasStock']
-        if status != "false":
+        status = response['stockRule']['deliveryRule']['allowPurchases']
+        status2 = response['stockRule']['deliveryRule']['displayText']
+        if status != "false" or status2 != "εξαντλήθηκε":
             msg = logger("PS5 " + ps5_name + " is in STOCK on " + site_domain + "\n\nBuy now -> " + ps5_buy + ps5_id + "/", 1)
             alerts(msg, 1)
         else:
