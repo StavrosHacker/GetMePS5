@@ -10,11 +10,11 @@ alerts = alerts.alerts
 def electrolineSearch(ps5):
     site_domain = "electroline.com.cy"
     ps5_name = "Disc Edition"
-    ps5_link = "https://www.electroline.com.cy/products/computing/gaming130/gaming-consoles13022/sony-playstation-5-disc-version-white/?lang=en"
+    ps5_link = "https://www.electroline.com.cy/en/products/computing/gaming130/gaming-consoles13022/sony-playstation-5-disc-version-white/"
 
     if ps5 == "digital":
         ps5_name = "Digital Edition"
-        ps5_link = "https://www.electroline.com.cy/products/computing/gaming130/gaming-consoles13022/sony-playstation-5-digital-version-white/?lang=en"
+        ps5_link = "https://www.electroline.com.cy/en/products/computing/gaming130/gaming-consoles13022/sony-playstation-5-digital-version-white/"
 
     logger("Searching on " + site_domain + "..", 0)
     
